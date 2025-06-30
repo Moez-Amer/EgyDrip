@@ -1,0 +1,13 @@
+{
+  "name": "egydrip-root",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "concurrently \"npm run start --prefix client\" \"node server/index.js\"",
+    "dev": "concurrently \"npm run dev --prefix client\" \"nodemon server/index.js\"",
+    "install-all": "npm install && npm install --prefix client && npm install --prefix server"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
